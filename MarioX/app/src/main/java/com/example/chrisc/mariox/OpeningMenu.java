@@ -1,17 +1,33 @@
 package com.example.chrisc.mariox;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 
 public class OpeningMenu extends ActionBarActivity {
+
+    Button startButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_opening_menu);
+
+        startButton = (Button) findViewById(R.id.start_button);
+        startButton.setOnClickListener(
+                new Button.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent into_queue = new Intent(v.getContext(), Queue.class);
+                        startActivity(into_queue);
+                    }
+                }
+        );
     }
 
 

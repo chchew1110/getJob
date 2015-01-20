@@ -16,6 +16,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Queue">
+
+        </activity>
+        <activity
+            android:name=".mario_p1"
+            android:screenOrientation="landscape"
+            >
+        </activity>
+
     </application>
 
 </manifest>
