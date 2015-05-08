@@ -70,15 +70,7 @@ public class Tic_Tac_Toe extends ActionBarActivity {
         bottom_middle.setOnClickListener(tic_tac_listener);
         bottom_right.setOnClickListener(tic_tac_listener);
 
-        //play the game
-        //playGame();
 
-    }
-
-    //Check if player 1 or player 2 have 3 in a row.
-    public boolean check_three_in_row()
-    {
-        return false;
     }
 
 }
