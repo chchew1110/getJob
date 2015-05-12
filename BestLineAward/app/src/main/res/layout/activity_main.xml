@@ -16,13 +16,15 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:textColor="#ffffffff" />
-
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textView" >
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/textView"
         android:layout_alignParentBottom="true"
         android:id="@+id/listoflines"
         android:focusableInTouchMode="true">
@@ -45,4 +47,5 @@
             android:textColor="#ffff0300"
             android:background="#ff000000" />
     </LinearLayout>
+    </ScrollView>
 </RelativeLayout>
