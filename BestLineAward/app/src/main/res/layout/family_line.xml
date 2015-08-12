@@ -175,6 +175,15 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/TheTotalNum"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/family_total"
+            android:layout_toEndOf="@+id/family_total"
+            android:textColor="#ffffffff" />
+
     </RelativeLayout>
     </HorizontalScrollView>
 

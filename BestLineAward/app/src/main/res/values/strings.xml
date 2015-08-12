@@ -1,5 +1,11 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
     <string name="app_name">BestLineAward</string>
+
+    <string-array name="membership_array">
+        <item>Active</item>
+        <item>Associate</item>
+        <item>Pledge</item>
+    </string-array>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
