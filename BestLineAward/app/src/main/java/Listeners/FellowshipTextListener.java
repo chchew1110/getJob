@@ -11,11 +11,13 @@ public class FellowshipTextListener implements TextWatcher
     FamilyLine line;
     int id;
     EditText edit;
+    Double fellowship;
     public FellowshipTextListener(Context context, int id_count, EditText ed)
     {
         line = (FamilyLine) context;
         id = id_count;
         edit = ed;
+        fellowship = 0.0;
     }
 
     @Override
@@ -30,7 +32,7 @@ public class FellowshipTextListener implements TextWatcher
         edit.removeTextChangedListener(this);
 
         String newString = s.toString();
-        double fellowship = 0.0;
+
 
         try
         {
@@ -48,6 +50,7 @@ public class FellowshipTextListener implements TextWatcher
     @Override
     public void afterTextChanged(Editable s)
     {
-
+        line.list_of_members.get(id).setFellowship(fellowship);
+        line.calculateTotalRow(id);
     }
 }

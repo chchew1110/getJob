@@ -6,21 +6,18 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
 
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
-
-public class LeadershipTextListener implements TextWatcher
+public class ServiceTextListener implements TextWatcher
 {
     FamilyLine line;
     int id;
     EditText edit;
-    Double leadership;
-    public LeadershipTextListener(Context context, int id_count, EditText ed)
+    Double service;
+    public ServiceTextListener(Context context, int id_count, EditText ed)
     {
         line = (FamilyLine) context;
         id = id_count;
         edit = ed;
-        leadership = 0.0;
+        service = 0.0;
     }
 
     @Override
@@ -38,13 +35,12 @@ public class LeadershipTextListener implements TextWatcher
 
         try
         {
-            leadership = Double.parseDouble(newString);
+            service = Double.parseDouble(newString);
         }
         catch(NumberFormatException e)
         {
-            leadership = 0.0;
+            service = 0.0;
         }
-
 
         edit.addTextChangedListener(this);
     }
@@ -53,8 +49,7 @@ public class LeadershipTextListener implements TextWatcher
     @Override
     public void afterTextChanged(Editable s)
     {
-        line.list_of_members.get(id).setLeadership(leadership);
+        line.list_of_members.get(id).setService(service);
         line.calculateTotalRow(id);
-
     }
 }

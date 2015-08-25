@@ -5,17 +5,19 @@ import android.content.Context;
 import android.graphics.Color;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.TextView;
+import android.widget.AdapterView.OnItemSelectedListener;
 
 
-public class MembershipSpinnerListener implements AdapterView.OnItemSelectedListener {
+public class MembershipSpinnerListener implements OnItemSelectedListener {
 
     FamilyLine activity;
     Members member = new Members();
+    int id_count;
 
-    public MembershipSpinnerListener(Context context)
+    public MembershipSpinnerListener(Context context, int id)
     {
         activity = (FamilyLine)context;
+        id_count = id;
     }
 
     @Override
@@ -24,18 +26,24 @@ public class MembershipSpinnerListener implements AdapterView.OnItemSelectedList
         if(position == 0)
         {
             member.setStatus("Active");
-            activity.list_of_members.set(activity.id_count, member);
+            activity.list_of_members.set(id_count, member);
+            activity.calculateTotalRow(id_count);
+            //System.out.println(activity.list_of_members.get(id_count).getStatus());
         }
         else if(position == 1)
         {
             member.setStatus("Associate");
-            activity.list_of_members.set(activity.id_count, member);
+            activity.list_of_members.set(id_count, member);
+            activity.calculateTotalRow(id_count);
+            //System.out.println(activity.list_of_members.get(id_count).getStatus());
         }
 
         else if(position == 2)
         {
             member.setStatus("Pledge");
-            activity.list_of_members.set(activity.id_count, member);
+            activity.list_of_members.set(id_count, member);
+            activity.calculateTotalRow(id_count);
+            //System.out.println(activity.list_of_members.get(id_count).getStatus());
         }
     }
 

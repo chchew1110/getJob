@@ -18,7 +18,10 @@
         </activity>
 
         <activity
-            android:name=".FamilyLine">
+            android:name=".FamilyLine"
+            android:screenOrientation="portrait"
+            android:clearTaskOnLaunch="false"
+            >
 
         </activity>
 

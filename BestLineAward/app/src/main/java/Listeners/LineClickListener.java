@@ -22,6 +22,7 @@ public class LineClickListener implements OnClickListener {
         {
             case R.id.gline:
                 Intent gline_layout = new Intent(activity, FamilyLine.class);
+                gline_layout.putExtra("name", activity.G_line_button.getText());
                 activity.startActivity(gline_layout);
                 break;
             case R.id.resilience:

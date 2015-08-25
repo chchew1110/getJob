@@ -1,6 +1,6 @@
 package com.example.chrisc.bestlineaward;
 
-
+import Listeners.*;
 import android.content.Context;
 import android.graphics.Color;
 import android.view.View;
@@ -20,6 +20,7 @@ public class CustomArrayAdapter<T> extends ArrayAdapter<T> {
         View v = super.getView(position, convertView, parent);
 
         ((TextView)v).setTextColor(Color.WHITE);
+
 
         return v;
     }
